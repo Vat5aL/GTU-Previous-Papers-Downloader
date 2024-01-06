@@ -30,7 +30,7 @@ This application allows users to input specific details to generate URLs for pre
 3. Run the Streamlit app:
 
    ```bash
-   streamlit run app.py
+   streamlit run gtu-paper-downloader-app.py
    ```
 
 4. Access the app in your browser through the provided URL.
