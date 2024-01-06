@@ -38,11 +38,13 @@ def main():
             st.error("Please fill in all the fields.")
             return
 
-        # Generate URLs
-        all_PDF_URL = generate_urls(subject_code, course_code, int(current_year))
+        # Show loader
+        with st.spinner('Fetching PDF Links...'):
+            # Generate URLs
+            all_PDF_URL = generate_urls(subject_code, course_code, int(current_year))
 
-        # Check URL validity
-        all_Valid_PDF_URL = [url for url in all_PDF_URL if check_url(url)]
+            # Check URL validity
+            all_Valid_PDF_URL = [url for url in all_PDF_URL if check_url(url)]
 
         # Display valid PDF links or message
         st.subheader('Direct Links:')
