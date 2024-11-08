@@ -29,7 +29,7 @@ def main():
         "BT", "BV", "CS", "DA", "DB", "DH", "DI", "DISP", "DM", "DP", "DS", "DV", "EP", "FD",
         "HM", "IB", "IC", "IM", "MA", "MB", "MC", "MCSP", "MD", "ME", "MH", "ML", "MN", "MP",
         "MR", "MS", "MT", "MV", "PB", "PD", "PH", "PM", "PP", "PR", "TE"
-    ], index=20)
+    ], index=5)
     current_year = st.text_input('Enter Current Year', value=str(2024))
 
     if st.button('DOWNLOAD'):
