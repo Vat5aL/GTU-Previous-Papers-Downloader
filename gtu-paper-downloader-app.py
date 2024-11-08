@@ -47,6 +47,8 @@ def main():
 
             # Check URL validity
             all_Valid_PDF_URL = [url for url in all_PDF_URL if check_url(url)]
+            # Reverse the list of valid PDF URLs
+            all_Valid_PDF_URL.reverse()
 
         # Display valid PDF links or message
         st.subheader('Direct Links:')
