@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import datetime
 
 # Function to check if URL is valid
 def check_url(url):
@@ -30,7 +31,8 @@ def main():
         "HM", "IB", "IC", "IM", "MA", "MB", "MC", "MCSP", "MD", "ME", "MH", "ML", "MN", "MP",
         "MR", "MS", "MT", "MV", "PB", "PD", "PH", "PM", "PP", "PR", "TE"
     ], index=5)
-    current_year = st.text_input('Enter Current Year', value=str(2024))
+    #current_year = st.text_input('Enter Current Year', value=str(2024))
+    current_year = datetime.datetime.now().year
 
     if st.button('DOWNLOAD'):
         # Check if inputs are empty
