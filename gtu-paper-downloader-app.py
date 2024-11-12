@@ -80,10 +80,11 @@ def main():
             else:
                 st.warning("No previous papers found. Make sure that subject code and course code are valid!")
 
-    # "DOWNLOAD ALL ZIP" button
+    # "DOWNLOAD ALL ZIP" button with spinner
     with col2:
         if subject_code and course_code and len(all_Valid_PDF_URL) > 0:
-            zip_file = create_zip(subject_code, course_code, all_Valid_PDF_URL)
+            with st.spinner('Preparing ZIP file...'):
+                zip_file = create_zip(subject_code, course_code, all_Valid_PDF_URL)
             zip_filename = f"{subject_code}_{course_code}_GTU_papers.zip"
             st.download_button(
                 label="DOWNLOAD ALL ZIP",
